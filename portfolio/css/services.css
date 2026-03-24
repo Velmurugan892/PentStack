@@ -1,0 +1,139 @@
+/* Services Page Styles */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-10px);
+  box-shadow: var(--panel-shadow);
+}
+
+.service-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-md);
+  background: rgba(15, 157, 154, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--primary-glow);
+  color: var(--primary);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  flex-grow: 1;
+  /* Pushes features to bottom */
+}
+
+.service-features {
+  list-style: none;
+  margin-top: 2rem;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1.5rem;
+}
+
+.service-features li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-main);
+}
+
+.service-features .fa-check {
+  color: var(--primary);
+}
+
+/* Tech Stack Container & Horizontal Scroll */
+.tech-stack-container {
+  overflow-x: auto;
+  padding-bottom: 4rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.horizontal-scroll-wrapper {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  padding: 2rem 5%;
+}
+
+.tech-category {
+  width: 400px;
+  /* Fixed width for horizontal scrolling */
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.tech-category h3 {
+  color: var(--primary);
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.tech-icons span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.tech-icons i {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s;
+}
+
+.tech-icons span:hover i {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontal-scroll-wrapper {
+    width: 100%;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .tech-category {
+    width: 100%;
+  }
+}

@@ -1,0 +1,142 @@
+/* About Page Styles */
+
+.page-header {
+  padding-top: calc(var(--nav-height) + 6rem);
+  padding-bottom: 4rem;
+}
+
+/* Flip Cards */
+.flip-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.flip-card {
+  perspective: 1000px;
+  height: 350px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front p {
+    display: block; /* Show 'Hover to reveal' */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: var(--panel-bg);
+  border: 1px solid var(--primary);
+  box-shadow: var(--panel-shadow);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+/* Timeline */
+.scroll-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.scroll-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  width: 50%;
+  padding-right: 3rem;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 3rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 20px;
+  right: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px var(--primary-glow);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -25px;
+  right: auto;
+}
+
+.timeline-content h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .flip-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .scroll-timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 80px !important;
+    padding-right: 0 !important;
+  }
+
+  .timeline-icon {
+    left: 5px !important;
+    right: auto !important;
+  }
+}

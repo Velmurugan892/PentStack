@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | PentStack Technologies</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo hover-target">
+                <div class="logo-icon">P</div>
+                PentStack
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="hover-target">Home</a></li>
+                <li><a href="about.html" class="hover-target">About</a></li>
+                <li><a href="services.html" class="hover-target">Services</a></li>
+                <li><a href="products.html" class="hover-target">Products</a></li>
+                <li><a href="contact.html" class="active hover-target">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle hover-target">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h1 class="section-title">Let's Build <span class="gradient-text">Together</span></h1>
+                    <p style="max-width: 600px; margin: 1rem auto; font-size: 1.1rem;">Have a
+                        project in mind or just want to say hi? Connect with our team and let's discuss your next big
+                        idea.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info glass-panel">
+                        <h3>Connect Directly</h3>
+                        <p class="mb-4">Click any link below to jump right into a conversation with us.</p>
+
+                        <div class="info-list">
+                            <a href="https://wa.me/916384349025" target="_blank" class="info-item hover-target">
+                                <div class="info-icon"
+                                    style="background: rgba(37, 211, 102, 0.1); color: #25D366; border-color: rgba(37, 211, 102, 0.3);">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span>WhatsApp</span>
+                                    <h4>+91 6384349025</h4>
+                                </div>
+                            </a>
+
+                            <a href="tel:+919677369849" class="info-item hover-target">
+                                <div class="info-icon"
+                                    style="background: rgba(138, 43, 226, 0.1); color: var(--primary); border-color: rgba(138, 43, 226, 0.3);">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span>Direct Line</span>
+                                    <h4>+91 9677369849</h4>
+                                </div>
+                            </a>
+
+                            <a href="mailto:pentstack@gmail.com" class="info-item hover-target">
+                                <div class="info-icon"
+                                    style="background: rgba(0, 210, 255, 0.1); color: var(--secondary); border-color: rgba(0, 210, 255, 0.3);">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span>Email Address</span>
+                                    <h4>pentstack@gmail.com</h4>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="social-connect mt-4">
+                            <h4 style="margin-bottom: 1rem; margin-top: 2rem;">Follow Us</h4>
+                            <div class="social-links" style="margin-top: 0;">
+                                <a href="https://instagram.com/PentStack_Technologies" target="_blank"
+                                    class="hover-target" style="width: 50px; height: 50px; font-size: 1.5rem;"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://facebook.com/Pent Stack" target="_blank" class="hover-target"
+                                    style="width: 50px; height: 50px; font-size: 1.5rem;"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enquiry Form -->
+                    <div class="contact-form-wrapper">
+                        <div class="glass-form-static" id="form-container">
+                            <h3>Send an Enquiry</h3>
+                            <form id="enquiry-form">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" required placeholder=" "
+                                        class="hover-target">
+                                    <label for="name">Your Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" required placeholder=" "
+                                        class="hover-target">
+                                    <label for="email">Email Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="mobile" name="mobile" required placeholder=" "
+                                        class="hover-target">
+                                    <label for="mobile">Mobile Number</label>
+                                </div>
+                                <div class="form-group">
+                                    <select id="service" name="service" required class="hover-target">
+                                        <option value="" disabled selected>Select Service</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="web">Mobile App Development</option>
+                                        <option value="cloud">Cloud Migration</option>
+                                        <option value="ai">AI/ML </option>
+                                        <option value="ui">UI/UX Design</option>
+                                        <option value="namma">Namma Area Inquiry</option>
+                                        <option value="other">Other Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message" name="message" rows="4" required placeholder=" "
+                                        class="hover-target"></textarea>
+                                    <label for="message">Your Message</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary hover-target w-100 mt-2">Submit Enquiry <i
+                                        class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Thank You!</h2>
+            <p>form submitted,we will contact you shortly</p>
+            <button id="close-modal" class="btn btn-primary mt-4">Close Message</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: flex;">
+                        <div class="logo-icon">P</div>
+                        PentStack
+                    </a>
+                    <p>Building the digital future with state-of-the-art web apps, mobile solutions, and cloud
+                        infrastructure. We bring your vision to reality.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/916384349025" target="_blank" class="hover-target"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/PentStack_Technologies" target="_blank" class="hover-target"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com/Pent Stack" target="_blank" class="hover-target"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="mailto:pentstack@gmail.com" class="hover-target"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html" class="hover-target">About Us</a></li>
+                        <li><a href="services.html" class="hover-target">Services</a></li>
+                        <li><a href="products.html" class="hover-target">Products</a></li>
+                        <li><a href="contact.html" class="hover-target">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Other footer columns matching exactly -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html" class="hover-target">Fullstack Dev</a></li>
+                        <li><a href="services.html" class="hover-target">Cloud Migration</a></li>
+                        <li><a href="services.html" class="hover-target">AI / ML</a></li>
+                        <li><a href="services.html" class="hover-target">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-phone" style="width: 20px; color: var(--primary);"></i> +91 9677369849
+                        </li>
+                        <li><i class="fa-brands fa-whatsapp" style="width: 20px; color: var(--primary);"></i> +91
+                            6384349025</li>
+                        <li><i class="fa-solid fa-envelope" style="width: 20px; color: var(--primary);"></i>
+                            pentstack@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PentStack Technologies. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+
+</body>
+
+</html>
